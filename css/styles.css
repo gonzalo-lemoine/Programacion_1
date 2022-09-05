@@ -1,9 +1,13 @@
 .encabezado{
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%; 
     height: 100px;
     padding: 20px;
     border: solid 5px black;
+    background-color: black;
+    color: white;
 }
 
 .logo{
@@ -13,33 +17,65 @@
 }
 
 .menu{
-    text-align: right;
+   text-align: right;
+   font-size: 20px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color:  white;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 
 a{
     text-decoration-line: none;
-    color:black;
+    color: white;
 }
 
-.anuncios{
+.series_pop{
     width: 100%; 
-    height: 100px;
+    height: 350px;
     padding: 20px;
     border: solid 5px black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .peliculas{
     width: 100%; 
-    height: 150px;
+    height: 350px;
     padding: 20px;
     border: solid 5px black;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .series{
     width: 100%; 
-    height: 150px;
+    height: 350px;
     padding: 20px;
     border: solid 5px black;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    margin-top: 10px;
+}
+img{
+    height: 400px;
 }
