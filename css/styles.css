@@ -139,4 +139,10 @@ img{
     font-size: 15px;
 }
 
+button{
+    background-color: black;
+    text-decoration-line: none ;
+    height: 60px;
+    width: 250px;
+}
 
