@@ -47,8 +47,9 @@ img{
 }
 
 .peliculas{
+    background-color:rgb(52, 57, 72);
     width: 100%; 
-    height: 350px;
+    height: 500px;
     padding: 20px;
     border: solid 5px black;
     text-align: center;
@@ -61,8 +62,9 @@ img{
 }
 
 .series{
+    background-color:rgb(52, 57, 72);
     width: 100%; 
-    height: 350px;
+    height: 500px;
     padding: 20px;
     border: solid 5px black;
     text-align: center;
@@ -75,8 +77,9 @@ img{
 }
 
 .series_pop{
+    background-color:rgb(52, 57, 72);
     width: 100%; 
-    height: 350px;
+    height: 500px;
     padding: 20px;
     border: solid 5px black;
     text-align: center;
@@ -88,8 +91,9 @@ img{
     align-items: center;
 }
 .pelis_pop{
+    background-color:rgb(52, 57, 72);
     width: 100%; 
-    height: 350px;
+    height: 500px;
     padding: 20px;
     border: solid 5px black;
     text-align: center;
@@ -101,8 +105,9 @@ img{
     align-items: center;
 }
 .pelis_val{
-   width: 100%; 
-    height: 350px;
+    background-color:rgb(52, 57, 72);
+    width: 100%; 
+    height: 500px;
     padding: 20px;
     border: solid 5px black;
     text-align: center;
@@ -114,8 +119,9 @@ img{
     align-items: center; 
 }
 .series_val{
+    background-color:rgb(52, 57, 72);
     width: 100%; 
-    height: 350px;
+    height: 500px;
     padding: 20px;
     border: solid 5px black;
     text-align: center;
@@ -135,14 +141,17 @@ img{
  
 .estreno {
     text-align: center;
-    color:antiquewhite;
+    color:white;
     font-size: 15px;
+    background-color:rgb(52, 57, 72);
 }
 
 button{
-    background-color: black;
+    color: white;
+    background-color:rgb(52, 57, 72);
     text-decoration-line: none ;
     height: 60px;
     width: 250px;
+    border: 0px;
 }
 
