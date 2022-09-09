@@ -32,6 +32,9 @@ h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 a{
     text-decoration-line: none;
@@ -44,6 +47,7 @@ a{
 
 img{
     height: 400px;
+    width: 280px;
 }
 
 .peliculas{
@@ -135,7 +139,7 @@ img{
 
 .titulo{
     text-align: center;
-    color:antiquewhite;
+    color:whitesmoke;
     font-size: 25px;
 }
  
