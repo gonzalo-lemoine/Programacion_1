@@ -159,3 +159,16 @@ button{
     border: 0px;
 }
 
+.detalle {
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.img_detalle{
+    width: 400px;
+    height: 500px;
+}
