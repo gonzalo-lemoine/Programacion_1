@@ -169,6 +169,9 @@ button{
 }
 
 .img_detalle{
-    width: 400px;
-    height: 500px;
+    width: 420px;
+    height: 550px;
+}
+b{
+    color: bisque;
 }
