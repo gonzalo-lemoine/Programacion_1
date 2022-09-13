@@ -155,7 +155,7 @@ a{
     background-color:rgb(52, 57, 72);
 }
 
-button{
+.boton_portada{
     color: white;
     background-color:rgb(52, 57, 72);
     text-decoration-line: none ;
@@ -188,10 +188,20 @@ button{
 b{
     color: bisque;
 }
+
 .menu_detalle{
     text-align: right;
     margin-right: 60px;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:  white;
+ }
+
+ .boton_detalle{
+    color: white;
+    background-color:rgb(212, 182, 11);
+    text-decoration-line: none ;
+    height: 45px;
+    width: 110px;
+    border: 0px;
  }
