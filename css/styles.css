@@ -46,10 +46,14 @@ a{
     margin-top: 10px;
 }
 
-img{
+.img_portada{
     height: 400px;
     width: 280px;
+    transition: transform.2s;
 }
+.img_portada:hover{
+    transform: scale(1.1);
+ }
 
 .peliculas{
     background-color:rgb(52, 57, 72);
@@ -160,13 +164,21 @@ button{
     border: 0px;
 }
 
-.detalle {
+.detalle_pelicula {
     display: flex;   
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     
+}
+
+.detalle_serie{
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; 
 }
 
 .img_detalle{
