@@ -60,6 +60,62 @@ a{
     transform: scale(1.1);
  }
 
+.comedia{
+    background-color:rgba(247, 247, 0, 0.219);
+    width: 100%; 
+    height: 400px;
+    padding: 20px;
+    border: solid 5px black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.accion{
+    background-color:rgba(247, 247, 0, 0.219);
+    width: 100%; 
+    height: 400px;
+    padding: 20px;
+    border: solid 5px black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.suspenso{
+    background-color:rgba(247, 247, 0, 0.219);
+    width: 100%; 
+    height: 400px;
+    padding: 20px;
+    border: solid 5px black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.drama{
+    background-color:rgba(247, 247, 0, 0.219);
+    width: 100%; 
+    height: 400px;
+    padding: 20px;
+    border: solid 5px black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 .peliculas{
     background-color:rgba(247, 247, 0, 0.219);
     width: 100%; 
@@ -218,10 +274,17 @@ b{
 
 .lista{
     font-size: 50px;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
  }
 
 .tituloLista{
     font-size: 50px;
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
  }
 
 input{
