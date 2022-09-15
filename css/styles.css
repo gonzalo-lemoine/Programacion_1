@@ -21,7 +21,7 @@
 .menu{
    text-align: right;
    font-size: 20px;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-family: 'Open Sans', sans-serif;
    color:  white;
    margin-right: 40px;
 }
@@ -32,10 +32,11 @@ body{
 }
 
 h1{
-    font-family: 'PT Sans Narrow', sans-serif;
+   font-family: 'Playfair Display SC', serif;
     text-align: left;
     font-size: 30px;
 }
+
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -54,6 +55,7 @@ a{
     width: 250px;
     transition: transform.2s;
 }
+
 .img_portada:hover{
     transform: scale(1.1);
  }
@@ -102,6 +104,7 @@ a{
     justify-content: space-around;
     align-items: center;
 }
+
 .pelis_pop{
     background-color:rgba(247, 247, 0, 0.219);
     width: 100%; 
@@ -116,6 +119,7 @@ a{
     justify-content: space-around;
     align-items: center;
 }
+
 .pelis_val{
     background-color:rgba(247, 247, 0, 0.219);
     width: 100%; 
@@ -130,6 +134,7 @@ a{
     justify-content: space-around;
     align-items: center; 
 }
+
 .series_val{
     background-color:rgba(247, 247, 0, 0.219);
     width: 100%; 
@@ -155,6 +160,7 @@ a{
     text-align: center;
     color:white;
     font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .boton_portada{
@@ -187,6 +193,7 @@ a{
     width: 420px;
     height: 550px;
 }
+
 b{
     color: bisque;
 }
@@ -201,24 +208,23 @@ b{
 
  .boton_detalle{
     color: white;
-    background-color:rgb(212, 182, 11);
+    background-color:#B7BB16;
     text-decoration-line: none ;
     height: 45px;
     width: 110px;
     border: 0px;
+    font-family: 'Open Sans', sans-serif;
  }
 
- .lista{
+.lista{
     font-size: 50px;
  }
- .tituloLista{
+
+.tituloLista{
     font-size: 50px;
  }
 
- 
-
-
- input{
+input{
     width: 0px;
     height: 40px;
     padding: 0 20px;
@@ -226,21 +232,7 @@ b{
     color:black;
     outline: none;
     border-radius: 30px;
-}
-
-.btn{
-   
-    top: 0;
-    right: 0;
-    background: #440080;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    border-radius: 50%;
-    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
 }
 
 input:hover{
