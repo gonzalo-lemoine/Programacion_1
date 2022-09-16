@@ -73,6 +73,12 @@ footer{
     width: 100%;
     margin-top: 100px;
 }
+.info_nosotros{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration-line: none;
+    color: white;
+    font-size: 13px;
+}
 
 .logo{
     margin-top: 10px;
@@ -89,55 +95,51 @@ footer{
  }
 
 .comedia{
-    background-color:rgba(247, 247, 0, 0.219);
+    background-color: black;
     width: 100%; 
     height: 400px;
-
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;   
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .accion{
-    background-color:rgba(247, 247, 0, 0.219);
+    background-color: black;
     width: 100%; 
     height: 400px;
-
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;   
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .suspenso{
-    background-color:rgba(247, 247, 0, 0.219);
+    background-color: black;
     width: 100%; 
     height: 400px;
-
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;   
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .drama{
-    background-color:rgba(247, 247, 0, 0.219);
+    background-color: black;
     width: 100%; 
     height: 400px;
-
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;   
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .peliculas{
@@ -295,12 +297,6 @@ b{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
- }
-
-.tituloLista{
-    font-size: 50px;
-    text-align: center;
-    font-family: 'Playfair Display SC', serif;
  }
 
 input{
