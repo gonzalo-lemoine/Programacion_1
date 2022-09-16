@@ -32,9 +32,10 @@ body{
 }
 
 h1{
-   font-family: 'Playfair Display SC', serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
     font-size: 30px;
+    font-weight: lighter;
 }
 
 p{
