@@ -7,7 +7,6 @@ body {
     flex-wrap: wrap;
     width: 100%; 
     height: 90px;
-
     background-color: black;
     color: white;
     align-items: center;
@@ -23,7 +22,8 @@ body {
 
 .nav-subcontainer {
     display: flex;
-    justify-content: flex-start;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
 }
@@ -59,6 +59,9 @@ p{
 a{
     text-decoration-line: none;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+
 }
 
 footer{
@@ -69,7 +72,7 @@ footer{
     align-items: center;
     background-color: rgb(148, 16, 16);
     color: white;
-    height: 100px;
+    height: 110px;
     width: 100%;
     margin-top: 100px;
 }
@@ -173,7 +176,6 @@ footer{
     background-color:black;
     width: 100%; 
     height: 400px;
-
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;   
@@ -316,4 +318,69 @@ input:hover{
 .buscador{
     text-align: right;
     padding: 10px;
+    justify-content: right;
+}
+
+
+@media(max-width: 420px){
+    a{
+        font-size: 15px;
+    }
+    .img_portada{
+        height: 190px;
+        width: 120px;
+    }
+    .encabezado{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu{
+        align-items: center;
+        margin-right: 0px;
+    }
+    h1{
+        font-size: 15px;
+    }
+    .logo{
+        width: 90px; 
+        height: 80px
+    }
+    input{
+        height: 20px;
+    }
+    p{
+        font-size: 13px;
+    }
+    footer{
+        height: 140px;
+    }
+    .img_detalle{
+        width: 420px;
+        height: 550px;
+    }
+    .h1_detalle{
+        text-align: center;
+    }
+    .peliculas{
+        margin-bottom: 40px;
+    }
+    .series{
+        margin-bottom: 40px;
+    }
+    .series_pop{
+        margin-bottom: 40px;
+    }
+    .pelis_pop{
+        margin-bottom: 40px;
+    }
+    .pelis_val{
+        margin-bottom: 40px;
+    }
+    .series_val{
+        margin-bottom: 40px;
+    }
+
 }
