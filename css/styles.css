@@ -300,8 +300,12 @@ b{
     justify-content: space-around;
     align-items: center;
  }
+ .radio{
+    height: 13px;
+    width: 13px;
+}
 
-input{
+.buscar{
     width: 0px;
     height: 40px;
     font-size: 18px;
@@ -312,7 +316,7 @@ input{
     font-family: 'Open Sans', sans-serif;
 }
 
-input:hover{
+.buscar:hover{
     width: 250px;
 }
 .buscador{
