@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <title>Magoba</title>
 </head>
 <body>
-    <header class = "encabezado"> 
+    <header> 
         <section class="encabezado">
             <div class="nav-subcontainer">
                 <a href="./index1.html"><img class = "logo" src="../Imagenes/MAGOBA (1).png"></a>
@@ -18,23 +18,33 @@
     </header>
     <br>
     <br>
-    <div class = "detalle_pelicula">
-        <article>
-        <img class = "img_detalle" src="../Imagenes/TopGunMaverick_poster.jpg" alt="" >
+    
+    <h1>Favoritos</h1> 
+    <div class="peliculas">
+        <article class="TopGun">
+            <a href="./detalle_pelicula.html"><img class = "img_portada" src="../Imagenes/TopGunMaverick_poster.jpg" alt="" ></a>
+            <br>
+            <p class = 'estreno'> 2022 | Accion</p>
         </article>
-        <article>
-        <br>
-        <h1 class="h1_detalle"> TOP GUN</h1>
-        <br>
-        <br>
-        <br>
-        <p> <b> Calificacion:</b> 8.50</p>
-        <p> <b> Fecha de estreno: </b>26/05/2022</p>
-        <p> <b>Duracion: </b>131 minutos</p>
-        <p> <b>Sinopsis: </b>Tras más de 30 años de servicio como uno de los mejores aviadores de la Armada,<br> Pete "Maverick" Mitchel se encuentra dónde siempre quiso estar, empujando los límites como <br> un valiente piloto de prueba. </p>
-        <p> <b>Genero: </b>Accion</p>
-        
-        <p> <b> Favoritos: </b></i> <input class="radio" type="radio" name="favorita" value="Top Gun"></p>
+        <article class="Peaky">
+            <a href="./detalle_serie.html"><img class = "img_portada" src="../Imagenes/PeakyBlinders.jpg" alt=""></a>
+            <br>
+            <p class = 'estreno'> 2013 | Drama</p>
+        </article>
+        <article class="avatar">
+            <a href="./detalle_pelicula.html"><img class = "img_portada" src="../Imagenes/avatar.jpeg" alt=""></a>
+            <br>
+            <p class = 'estreno'> 2009 | Accion</p>
+        </article>
+        <article class="hollywood">
+            <a href="./detalle_pelicula.html"><img class = "img_portada" src="../Imagenes/hollywood.webp" alt=""></a>
+            <br>
+            <p class = 'estreno'> 2019 | Comedia</p>
+        </article>
+        <article class="euphoria">
+            <a href="./detalle_serie.html"><img class = "img_portada" src="../Imagenes/euphoria.jpg" alt=""></a>
+            <br>
+            <p class = 'estreno'>2019 | Drama</p>
         </article>
     </div>
     <footer>
