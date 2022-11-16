@@ -9,6 +9,7 @@ fetch (url_pelis_pop)
         let info = data.results
         let conteiner = document.querySelector('.pelis_pop');
         let peliculas_populares = '';
+
         for(let i = 0; i<info.length; i++){
             peliculas_populares += `<article>
                                         <img src=${info[i].backdrop_path} alt='' />
@@ -46,7 +47,7 @@ let url_pelis_latest = 'https://api.themoviedb.org/3/movie/upcoming?api_key=0317
         })
 
 
-let url_series = 'https://api.themoviedb.org/3/tv/{tv_id}/episode_groups?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US'
+let url_series = 'https://api.themoviedb.org/3/tv/latest?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US'
 
 fetch (url_pelis_latest)
     .then(function(response){
