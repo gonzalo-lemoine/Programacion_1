@@ -12,7 +12,7 @@ fetch (url_pelis_pop)
         for(let i = 0; i<info.length; i++){
             peliculas_populares += `<article>
                                         <img src=${info[i].backdrop_path} alt='' />
-                                        <p>${info[i].title}</p>
+                                        <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].title}</p></a>
                                     </article>`
         }
         conteiner.innerHTML = peliculas_populares;
