@@ -8,12 +8,13 @@ fetch (url_pelis_pop)
         console.log(data)
         let info = data.results
         let conteiner = document.querySelector('.pelis_pop');
+        let url_img = 'https://image.tmdb.org/t/p/w100/'
         let peliculas_populares = '';
 
         for(let i = 0; i<info.length; i++){
             peliculas_populares += `<article>
-                                        <img src=${info[i].backdrop_path} alt='' />
-                                        <p>${info[i].title}</p>
+                                        <img src=${url_img + info[i].poster_path} alt='' />
+                                        <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].title}</p></a>
                                     </article>`
         }
         conteiner.innerHTML = peliculas_populares;
@@ -37,7 +38,7 @@ let url_pelis_latest = 'https://api.themoviedb.org/3/movie/upcoming?api_key=0317
             for(let i = 0; i<info.length; i++){
                 peliculas_latest += `<article>
                                             <img src=${info[i].poster_path} alt='' />
-                                            <p>${info[i].original_title}</p>
+                                            <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_title}</p></a>
                                         </article>`
             }
             conteiner.innerHTML = peliculas_latest;
@@ -61,7 +62,7 @@ fetch (url_pelis_latest)
         for(let i = 0; i<info.length; i++){
             series += `<article>
                                         <img src=${info[i].poster_path} alt='' />
-                                        <p>${info[i].original_title}</p>
+                                        <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_title}</p></a>
                                     </article>`
         }
         conteiner.innerHTML = series;
