@@ -13,7 +13,7 @@ fetch (url_pelis_pop)
 
         for(let i = 0; i<info.length; i++){
             peliculas_populares += `<article>
-                                        <img src=${url_img + info[i].poster_path} alt='' />
+                                        <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />
                                         <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].title}</p></a>
                                     </article>`
         }
@@ -37,7 +37,7 @@ let url_pelis_latest = 'https://api.themoviedb.org/3/movie/upcoming?api_key=0317
             let peliculas_latest = '';
             for(let i = 0; i<info.length; i++){
                 peliculas_latest += `<article>
-                                            <img src=${info[i].poster_path} alt='' />
+                                            <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />                                            
                                             <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_title}</p></a>
                                         </article>`
             }
@@ -61,7 +61,7 @@ fetch (url_pelis_latest)
         let series = '';
         for(let i = 0; i<info.length; i++){
             series += `<article>
-                                        <img src=${info[i].poster_path} alt='' />
+                                        <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />                                        
                                         <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_title}</p></a>
                                     </article>`
         }
