@@ -1,10 +1,11 @@
 let query = location.search; 
 let stringToObject = new URLSearchParams(query); 
-let aBuscar = stringToObject.get('buscador'); 
-console.log(aBuscar);
+let busca= stringToObject.get('buscador'); 
+console.log(busca);
 
 
-let url = `https://api.themoviedb.org/3/movie/popular?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&page=1?name=${aBuscar}`
+let url = `https://api.themoviedb.org/3/tv/latest?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-USname=${busca}`
+
 
 console.log(url);
 
