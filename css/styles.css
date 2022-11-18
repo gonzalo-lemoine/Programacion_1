@@ -96,91 +96,13 @@ footer{
     transform: scale(1.1);
  }
 
-.comedia{
-    background-color: black;
-    width: 100%; 
-    height: 400px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;   
+.favoritos{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-}
-.accion{
-    background-color: black;
-    width: 100%; 
-    height: 400px;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;   
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-.suspenso{
-    background-color: black;
-    width: 100%; 
-    height: 400px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;   
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-.drama{
-    background-color: black;
-    width: 100%; 
-    height: 400px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;   
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-.peliculas{
-    background-color: black;
-    width: 100%; 
-    height: 400px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;   
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.series{
-    background-color:black;
-    width: 100%; 
-    height: 400px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;   
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.series_pop{
-    background-color:black;
-    width: 100%; 
-    height: 400px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;   
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .pelis_pop{
@@ -221,18 +143,6 @@ footer{
     justify-content: space-around;
     align-items: center;
 }
-.series_val{
-    background-color:black;
-    width: 100%; 
-    height: 400px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;   
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
 
 .titulo{
     text-align: center;
@@ -256,22 +166,17 @@ footer{
     border: 0px;
 }
 
-.detalle_pelicula {
-    display: flex;   
+.detalle {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
 
-.detalle_serie{
-    display: flex;   
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center; 
-}
 
 .img_detalle{
     width: 420px;

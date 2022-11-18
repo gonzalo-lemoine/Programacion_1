@@ -37,7 +37,7 @@ let url_pelis_latest = 'https://api.themoviedb.org/3/movie/upcoming?api_key=0317
             let peliculas_latest = '';
             for(let i = 0; i<info.length; i++){
                 peliculas_latest += `<article>
-                                            <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />                                            
+                                            <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt=''/>                                            
                                             <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_title}</p></a>
                                         </article>`
             }
