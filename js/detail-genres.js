@@ -37,9 +37,11 @@ fetch(url)
         console.log(data);
 
         let section = document.querySelector('.detalle')
-        let url_img = 'https://image.tmdb.org/t/p/w300/'
+        let url_img_plat = 'https://image.tmdb.org/t/p/w200/'
         section.innerHTML += `<article>
-                            <img src="${url_img + data.rent[0].logo_path}">
+                            <h2> Plataformas:</h2>
+                            <img src="${url_img_plat + data.results.KR.rent[0].logo_path}">
+                            <img src="${url_img_plat + data.results.MX.buy[0].logo_path}">
                             </article>`   
     })
     .catch(function(error){
