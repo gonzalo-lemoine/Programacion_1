@@ -26,7 +26,7 @@ function buscarYMostrarFavoritos (id){
             console.log(data);
             lista_fav.innerHTML += `<article>
                                 <img src="${url_img + data.poster_path}" >
-                                <h2>Nombre: ${data.original_title}</h2>
+                                <p>Nombre: ${data.original_title}</p>
                             </article>`
         })
         .catch(function(e){
