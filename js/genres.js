@@ -42,14 +42,14 @@ fetch(url_generos)
     .catch(function(error){
         console.log(error);
     })
-let url_peli = "https://api.themoviedb.org/3/discover/movie?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
-fetch(url_peli)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log(data)
-    })
-    .catch(function(error){
-        console.log(error);
-    })
+url_movies= "https://api.themoviedb.org/3/discover/tv?api_key=0317bbf7efac7dd04b2c2c3748377d57"
+fetch(url_movies)
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+    console.log(data)
+})
+.catch(function(error){
+    console.log(error);
+})
