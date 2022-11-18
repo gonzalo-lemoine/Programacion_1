@@ -4,7 +4,7 @@ let queryStringToObject = new URLSearchParams(queryString);
 let id = queryStringToObject.get('id'); 
 
 let url =`https://api.themoviedb.org/3/movie/${id}?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US`
-
+let url_plataformas = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=0317bbf7efac7dd04b2c2c3748377d57`
 console.log(url);
 
 fetch(url)
@@ -29,6 +29,22 @@ fetch(url)
         console.log(error);
     })
 
+    fetch(url_plataformas)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+
+        let section = document.querySelector('.detalle')
+        let url_img = 'https://image.tmdb.org/t/p/w300/'
+        section.innerHTML += `<article>
+                            <img src="${url_img + data.rent[0].logo_path}">
+                            </article>`   
+    })
+    .catch(function(error){
+        console.log(error);
+    })
 
     ///AGREGADO A FAVORITOS
     let favoritos = [];

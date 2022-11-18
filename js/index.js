@@ -62,7 +62,7 @@ fetch (url_series)
         for(let i = 0; i<info.length; i++){
             series += `<article>
                                         <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />                                        
-                                        <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_title}</p></a>
+                                        <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_name}</p></a>
                                     </article>`
         }
         conteiner.innerHTML = series;

@@ -9,7 +9,7 @@ let url_pelis_pop = `https://api.themoviedb.org/3/search/movie?query=${busca}&ap
 
 console.log(url_pelis_pop);
 
-fetch(url)
+fetch(url_pelis_pop)
     .then(function(response){
         return response.json();
     })
