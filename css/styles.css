@@ -144,6 +144,19 @@ footer{
     align-items: center;
 }
 
+.results{
+    background-color:black;
+    width: 100%; 
+    height: 400px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .titulo{
     text-align: center;
     color:whitesmoke;

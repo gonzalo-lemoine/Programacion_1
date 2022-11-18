@@ -48,9 +48,9 @@ let url_pelis_latest = 'https://api.themoviedb.org/3/movie/upcoming?api_key=0317
         })
 
 
-let url_series = 'https://api.themoviedb.org/3/tv/latest?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US'
+let url_series = 'https://api.themoviedb.org/3/tv/on_the_air?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&page=1'
 
-fetch (url_pelis_latest)
+fetch (url_series)
     .then(function(response){
         return response.json();
     })
