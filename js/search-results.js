@@ -17,12 +17,6 @@ fetch(url_pelis_pop)
         console.log(data);
         let info = data.results
         let container = document.querySelector('.results');
-        if (busca == "" || busca < 3){
-            busca.addEventListener('evento', function(){
-                alert("Ingrese bien la informacion")
-            })
-            
-        }
             let characters = '';
             for(let i=0; i<info.length; i++){
                 characters += `<article>

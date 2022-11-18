@@ -13,8 +13,10 @@ fetch (url_pelis_pop)
 
         for(let i = 0; i<info.length; i++){
             peliculas_populares += `<article>
-                                        <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />
-                                        <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].title}</p></a>
+                                        <a href='detalle_pelicula.html?id=${info[i].id}'>
+                                            <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />
+                                            <p>${info[i].title}</p>
+                                        </a>
                                     </article>`
         }
         conteiner.innerHTML = peliculas_populares;
@@ -37,8 +39,10 @@ let url_pelis_latest = 'https://api.themoviedb.org/3/movie/upcoming?api_key=0317
             let peliculas_latest = '';
             for(let i = 0; i<info.length; i++){
                 peliculas_latest += `<article>
+                                            <a href='detalle_pelicula.html?id=${info[i].id}'>
                                             <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt=''/>                                            
-                                            <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_title}</p></a>
+                                            <p>${info[i].original_title}</p>
+                                            </a>
                                         </article>`
             }
             conteiner.innerHTML = peliculas_latest;
@@ -61,8 +65,10 @@ fetch (url_series)
         let series = '';
         for(let i = 0; i<info.length; i++){
             series += `<article>
+                                    <a href='detalle_pelicula.html?id=${info[i].id}'>
                                         <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />                                        
-                                        <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_name}</p></a>
+                                        <p>${info[i].original_name}</p>
+                                    </a>
                                     </article>`
         }
         conteiner.innerHTML = series;
@@ -70,3 +76,26 @@ fetch (url_series)
     .catch(function(error){
         console.log(error);
     })
+
+    //Capturo el form de busqueda
+    let form = document.querySelector('form');
+
+    //Capturo el input del form
+    let inputBusqueda = document.querySelector('.inputBusqueda');
+
+    //Capturo el <p> de errores
+    let error = document.querySelector('.errorForm');
+
+    //agrego un eventListener para el submit del form
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        
+        if (inputBusqueda.value === "") {
+            error.innerHTML = "input vacio"
+        } else if (inputBusqueda.value.length <= 3) {
+            error.innerHTML = "almenos 2 letras"
+        } else {
+            form.submit()
+        }
+    })
+
