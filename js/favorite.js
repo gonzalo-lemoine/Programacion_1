@@ -16,6 +16,7 @@ if (elegidos == null || elegidos.length == 0){
 }
 function buscarYMostrarFavoritos (id){
     let url = `https://api.themoviedb.org/3/movie/${id}?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US`
+    let url_img = 'https://image.tmdb.org/t/p/w200/'
 
     fetch (url)
         .then(function(response){
@@ -24,7 +25,7 @@ function buscarYMostrarFavoritos (id){
         .then(function(data){
             console.log(data);
             lista_fav.innerHTML += `<article>
-                                <img src="${data.poster_path}">
+                                <img src="${url_img + data.poster_path}" >
                                 <h2>Nombre: ${data.original_title}</h2>
                             </article>`
         })
