@@ -157,10 +157,23 @@ footer{
     justify-content: space-around;
     align-items: center;
 }
+.foto_trailer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Trailer{
+    justify-content: space-around;
+   text-align: center;
+}
 .titulo{
     text-align: center;
     color:whitesmoke;
     font-size: 18px;
+}
+.generos{
+    display: flex;
+    flex-direction: row;
 }
  
 .estreno {

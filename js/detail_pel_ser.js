@@ -4,7 +4,7 @@ let queryStringToObject = new URLSearchParams(queryString);
 let id = queryStringToObject.get('id'); 
 
 let url =`https://api.themoviedb.org/3/movie/${id}?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US`
-let url_plataformas = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=0317bbf7efac7dd04b2c2c3748377d57`
+
 console.log(url);
 
 fetch(url)
@@ -15,27 +15,33 @@ fetch(url)
         console.log(data);
 
         let section = document.querySelector('.detalle')
-        let url_img = 'https://image.tmdb.org/t/p/w1280/'
+        let url_img = 'https://image.tmdb.org/t/p/w342/'
         section.innerHTML += `<div class="detalle">
                                 <h2>${data.original_title}</h2>
-                                <p>${data.release_date} - ${data.runtime} minutos</p>
-                                <img src="${url_img + data.backdrop_path}">
-                                <p>Clasificacion: ${data.vote_average}</p>
-                                <p>Sinopsis: ${data.overview}</p>
+                                <p>${data.release_date}  |  ${data.runtime} minutos</p>
+                                <div class="foto_trailer">
+                                    <img src="${url_img + data.poster_path}" width="300">
+                                    <div class = "Trailer"></div>
+                                </div>
                                 <ul class="generos"></ul>
+                                <p>${data.overview}</p>
+                                <p>Calificacion: ${data.vote_average}</p>
                             </div>`   
 
         let generos = document.querySelector('.generos');
 
         
         for (let i=0; i<data.genres.length; i++) {
-            generos.innerHTML += `<li>${data.genres[i].name}</li>`
+            generos.innerHTML += `<ul>${data.genres[i].name}</ul>`
         }
     })
     .catch(function(error){
         console.log(error);
     })
 
+
+    /// PLATAFORMAS
+    let url_plataformas = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=0317bbf7efac7dd04b2c2c3748377d57`
     fetch(url_plataformas)
     .then(function(response){
         return response.json();
@@ -55,6 +61,31 @@ fetch(url)
         console.log(error);
     })
 
+    /// TRAILER
+    let url_trailer = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US`
+    fetch(url_trailer)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        let url_youtube = 'https://www.youtube.com/embed/'
+        let Trailer = document.querySelector('.Trailer')
+        
+        for (let i = 0; i< data.results.length; i++){                    
+            if (data.results[i].type == 'Trailer'){
+                Trailer.innerHTML += `<iframe src = "${url_youtube + data.results[i].key}" width= "1050px" height = "500px"></iframe>`
+                
+                break
+            }
+        }
+        
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+
+    ///RECOMENDACIONES
     let url_recomendaciones = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&page=1`
     fetch(url_recomendaciones)
     .then(function(response){
