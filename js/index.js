@@ -91,9 +91,12 @@ fetch (url_series)
         e.preventDefault();
         
         if (inputBusqueda.value === "") {
-            error.innerHTML = "input vacio"
+            let alerta1 = "ingrese una pelicula/serie en el buscador";
+            alert(alerta1);
+
         } else if (inputBusqueda.value.length <= 3) {
-            error.innerHTML = "almenos 2 letras"
+            let alerta2 = "Debe ingresar al menos 4 caracteres";
+            alert(alerta2);
         } else {
             form.submit()
         }

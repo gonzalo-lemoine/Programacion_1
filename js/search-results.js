@@ -17,16 +17,44 @@ fetch(url_pelis_pop)
         console.log(data);
         let info = data.results
         let container = document.querySelector('.results');
-            let characters = '';
+            let peliculas = '';
             for(let i=0; i<info.length; i++){
-                characters += `<article>
+                peliculas += `<article>
                                     <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />   
                                     <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_title}</p></a>
                                 </article>`
             }
-            container.innerHTML = characters;   
+            container.innerHTML = peliculas;   
     })
         
     .catch(function(error){
         console.log(error);
     })
+
+    let url_series= `https://api.themoviedb.org/3/search/tv?query=${busca}&api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&page=1&include_adult=false`
+
+
+    console.log(url_series);
+    
+    fetch(url_series)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            console.log(data);
+            let info = data.results
+            let container = document.querySelector('.results');
+                let series = '';
+                for(let i=0; i<info.length; i++){
+                    series += `<article>
+                                        <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />   
+                                        <a href='detalle_pelicula.html?id=${info[i].id}'><p>${info[i].original_title}</p></a>
+                                    </article>`
+                }
+                container.innerHTML = series;   
+        })
+            
+        .catch(function(error){
+            console.log(error);
+        })
+    
