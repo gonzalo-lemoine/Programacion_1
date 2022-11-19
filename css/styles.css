@@ -164,7 +164,18 @@ footer{
 }
 .Trailer{
     justify-content: space-around;
-   text-align: center;
+  
+}
+.recomendaciones{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.recomendaciones_2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
 }
 .titulo{
     text-align: center;
@@ -200,9 +211,15 @@ footer{
     align-items: flex-start;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 50px;
+    padding: 10px;
 }
-
+.platafoma_videos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-self: center;
+}
 
 .img_detalle{
     width: 420px;

@@ -20,8 +20,9 @@ fetch(url)
                                 <h2>${data.original_title}</h2>
                                 <p>${data.release_date}  |  ${data.runtime} minutos</p>
                                 <div class="foto_trailer">
-                                    <img src="${url_img + data.poster_path}" width="300">
+                                    <img src="${url_img + data.poster_path}" width="300px" height ='520px'>
                                     <div class = "Trailer"></div>
+                                    <div class="otros_videos"><p>Todos los videos y trailers</p></div>
                                 </div>
                                 <ul class="generos"></ul>
                                 <p>${data.overview}</p>
@@ -32,7 +33,9 @@ fetch(url)
 
         
         for (let i=0; i<data.genres.length; i++) {
-            generos.innerHTML += `<ul>${data.genres[i].name}</ul>`
+            generos.innerHTML += `<a href='genres.html?id=>${data.genres[i].name}'>
+                                    <ul>${data.genres[i].name}</ul>
+                                    </a>`
         }
     })
     .catch(function(error){
@@ -51,11 +54,11 @@ fetch(url)
 
         let section = document.querySelector('.detalle')
         let url_img_plat = 'https://image.tmdb.org/t/p/w200/'
-        section.innerHTML += `<article>
-                            <h2> Plataformas:</h2>
-                            <img src="${url_img_plat + data.results.KR.rent[0].logo_path}">
-                            <img src="${url_img_plat + data.results.MX.buy[0].logo_path}">
-                            </article>`   
+        section.innerHTML += ` <article>
+                                <h2> Disponible en:</h2>
+                                <img src="${url_img_plat + data.results.KR.rent[0].logo_path}">
+                                <img src="${url_img_plat + data.results.MX.buy[0].logo_path}">
+                                </artincle>`   
     })
     .catch(function(error){
         console.log(error);
@@ -71,19 +74,24 @@ fetch(url)
         console.log(data);
         let url_youtube = 'https://www.youtube.com/embed/'
         let Trailer = document.querySelector('.Trailer')
-        
+        let videos = document.querySelector('.otros_videos')
         for (let i = 0; i< data.results.length; i++){                    
             if (data.results[i].type == 'Trailer'){
-                Trailer.innerHTML += `<iframe src = "${url_youtube + data.results[i].key}" width= "1050px" height = "500px"></iframe>`
+                Trailer.innerHTML += `<iframe src = "${url_youtube + data.results[i].key}" width= "850px" height = "520px"></iframe>`
                 
                 break
             }
         }
-        
+        for (let i = 0; i< data.results.length; i++){                    
+            if (data.results[i].type == 'Trailer'){
+                videos.innerHTML += `<iframe src = "${url_youtube + data.results[i].key}" ></iframe>`
+            }
+        }
     })
     .catch(function(error){
         console.log(error);
     })
+
 
     ///RECOMENDACIONES
     let url_recomendaciones = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&page=1`
@@ -96,25 +104,34 @@ fetch(url)
 
         let section = document.querySelector('.recomendaciones')
         let url_img_reco = 'https://image.tmdb.org/t/p/w300/'
-        section.innerHTML += `<div>
+        section.innerHTML += `
                             <h2> Recomendaciones:</h2>
+                            <section class="recomendaciones_2">
+                            <article>
                             <a href='detalle_pelicula.html?id=${data.results[0].id}'>
                             <img src="${url_img_reco + data.results[0].poster_path}">
                             <p>Nombre: ${data.results[0].original_title}</p>
                             </a>
+                            </article>
+                            <article>
                             <a href='detalle_pelicula.html?id=${data.results[1].id}'>
                             <img src="${url_img_reco + data.results[1].poster_path}">
                             <p>Nombre: ${data.results[1].original_title}</p>
                             </a>
+                            </article>
+                            <article>
                             <a href='detalle_pelicula.html?id=${data.results[2].id}'>
                             <img src="${url_img_reco + data.results[2].poster_path}">
                             <p>Nombre: ${data.results[2].original_title}</p>
                             </a>
+                            </article>
+                            <article>
                             <a href='detalle_pelicula.html?id=${data.results[3].id}'>
                             <img src="${url_img_reco + data.results[3].poster_path}">
                             <p>Nombre: ${data.results[3].original_title}</p>
                             </a>
-                            </div>`   
+                            </article>
+                            </section>`   
     })
     .catch(function(error){
         console.log(error);

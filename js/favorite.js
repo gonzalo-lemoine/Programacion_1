@@ -25,8 +25,10 @@ function buscarYMostrarFavoritos (id){
         .then(function(data){
             console.log(data);
             lista_fav.innerHTML += `<article>
+                                <a href='detalle_pelicula.html?id=${data.id}'>
                                 <img src="${url_img + data.poster_path}" >
                                 <p>Nombre: ${data.original_title}</p>
+                                </a>
                             </article>`
         })
         .catch(function(e){
