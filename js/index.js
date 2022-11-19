@@ -7,14 +7,14 @@ fetch (url_pelis_pop)
     .then(function(data){
         console.log(data)
         let info = data.results
-        let conteiner = document.querySelector('.pelis_pop');
+        let conteiner = document.querySelector('.carrusel');
         let url_img = 'https://image.tmdb.org/t/p/w100/'
         let peliculas_populares = '';
 
         for(let i = 0; i<info.length; i++){
-            peliculas_populares += `<article>
+            peliculas_populares += `<article class="pelis">
                                         <a href='detalle_pelicula.html?id=${info[i].id}'>
-                                            <img src=${"https://image.tmdb.org/t/p/w200/" + info[i].poster_path} alt='' />
+                                            <img src=${"https://image.tmdb.org/t/p/w300/" + info[i].poster_path} alt='' />
                                             <p>${info[i].title}</p>
                                         </a>
                                     </article>`
@@ -25,6 +25,21 @@ fetch (url_pelis_pop)
         console.log(error);
     })
 
+    let fila = document.querySelector('.contenedor_carrusel');
+    let peliculas = document.querySelectorAll('.pelis');
+    
+    let flechaIzquierda = document.getElementById('flecha_izquierda');
+    let flechaDerecha = document.getElementById('flecha_derecha');
+    
+    // ? ----- ----- Event Listener para la flecha derecha. ----- -----
+    flechaDerecha.addEventListener('click', () => {
+        fila.scrollLeft += fila.offsetWidth;
+    });
+    
+    // ? ----- ----- Event Listener para la flecha izquierda. ----- -----
+    flechaIzquierda.addEventListener('click', () => {
+        fila.scrollLeft -= fila.offsetWidth;
+    });
 
 let url_pelis_latest = 'https://api.themoviedb.org/3/movie/upcoming?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&page=1'
 
