@@ -71,7 +71,7 @@ footer{
     align-items: center;
     background-color: rgb(148, 16, 16);
     color: white;
-    height: 110px;
+    height: 130px;
     width: 100%;
     margin-top: 50px;
 }
@@ -176,6 +176,18 @@ footer{
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
+}
+.recomendacionesButton{
+    background-color: rgb(148, 16, 16);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    border-radius: 12px;
+}
+.recomendacionesButton:hover{
+    color: black;
+    background-color: white;
+    transform: scale(1.1)
+    
 }
 .titulo{
     text-align: center;
