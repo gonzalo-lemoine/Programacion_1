@@ -199,7 +199,14 @@ footer{
 b{
     color: bisque;
 }
-
+.allgenres{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    height: 300px;  
+}
 .menu_detalle{
     text-align: right;
     margin-right: 60px;
