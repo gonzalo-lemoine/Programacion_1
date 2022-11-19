@@ -33,7 +33,7 @@ fetch(url)
 
         
         for (let i=0; i<data.genres.length; i++) {
-            generos.innerHTML += `<a href='genres.html?id=>${data.genres[i].name}'>
+            generos.innerHTML += `<a href='genres.html?id=${data.genres[i].name}'>
                                     <ul>${data.genres[i].name}</ul>
                                     </a>`
         }
@@ -136,6 +136,15 @@ fetch(url)
     .catch(function(error){
         console.log(error);
     })
+    
+    let buttonRecomendaciones = document.querySelector(".recomendacionesButton");
+    let recomendaciones = document.querySelector(".recomendaciones");
+
+    buttonRecomendaciones.addEventListener('click', function(e){
+        buttonRecomendaciones.style.display = "none";
+
+        recomendaciones.style.display = "block";
+    })
 
     ///AGREGADO A FAVORITOS
     let favoritos = [];
@@ -167,11 +176,4 @@ fetch(url)
         console.log(localStorage);
     })
 
-    let buttonRecomendaciones = document.querySelector(".recomendacionesButton");
-    let recomendaciones = document.querySelector(".recomendaciones");
 
-    buttonRecomendaciones.addEventListener('click', function(e){
-        buttonRecomendaciones.style.display = "none";
-
-        recomendaciones.style.display = "block";
-    })
