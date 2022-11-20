@@ -289,7 +289,7 @@ b{
     padding: 10px;
     justify-content: right;
 }
-/*---FLECHAS---*/
+/*---------------------------------------------------------------FLECHAS 1------------------------------------------------------*/
 .contenedor_peliculas_populares{
     margin: 20px;
 }
@@ -322,7 +322,75 @@ b{
     background: rgba(0,0,0, .9);
 }
 
-/*----CARRUSEL-----*/
+/*-------------------------------------------------------FLECHAS 2---------------------------------------------------------------*/
+
+.contenedor_peliculas_recientes{
+    margin: 20px;
+}
+.controles2{
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+.contenedor_peliculas_recientes .controles2 .flecha_izquierda2,
+.contenedor_peliculas_recientes .controles2 .flecha_derecha2{
+    position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+}
+.contenedor_peliculas_recientes .controles2 .flecha_izquierda2{
+    left:0%;
+}
+.contenedor_peliculas_recientes .controles2 .flecha_derecha2{
+    right: 0%;
+}
+.contenedor_peliculas_recientes .controles2 .flecha_izquierda2:hover,
+.contenedor_peliculas_recientes .controles2 .flecha_derecha2:hover{
+    background: rgba(0,0,0, .9);
+}
+
+/*-------------------------------------------------------FLECHAS 3---------------------------------------------------------------*/
+
+.contenedor_series_recientes{
+    margin: 20px;
+}
+.controles3{
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+.contenedor_series_recientes .controles3 .flecha_izquierda3,
+.contenedor_series_recientes .controles3 .flecha_derecha3{
+    position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+}
+.contenedor_series_recientes .controles3 .flecha_izquierda3{
+    left:0%;
+}
+.contenedor_series_recientes .controles3 .flecha_derecha3{
+    right: 0%;
+}
+.contenedor_series_recientes .controles3 .flecha_izquierda3:hover,
+.contenedor_series_recientes .controles3 .flecha_derecha3:hover{
+    background: rgba(0,0,0, .9);
+}
+
+/*-------------------------------------------------------CARRUSEL 1-------------------------------------------------------------------*/
 
 .contenedor_peliculas_populares .contenedor_carrusel {
 	width: 100%;
@@ -338,6 +406,40 @@ b{
 	transition: .3s ease all;
 	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
 }
+
+/*------------------------------------------------------CARRUSEL2------------------------------------------------------*/
+
+.contenedor_peliculas_recientes .contenedor_carrusel2 {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+}
+.contenedor_peliculas_recientes .contenedor_carrusel2 .carrusel2 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.contenedor_peliculas_recientes .contenedor_carrusel2 .carrusel2 .pelis {
+	width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+/*------------------------------------------------------CARRUSEL3------------------------------------------------------*/
+
+.contenedor_series_recientes .contenedor_carrusel3 {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+}
+.contenedor_series_recientes .contenedor_carrusel3 .carrusel3 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.contenedor_series_recientes .contenedor_carrusel3 .carrusel3 .pelis {
+	width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
 
 
 
