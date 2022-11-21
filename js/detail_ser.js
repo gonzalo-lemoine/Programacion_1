@@ -3,7 +3,7 @@ let queryString = location.search;
 let queryStringToObject = new URLSearchParams(queryString);
 let id = queryStringToObject.get('id'); 
 
-let url =`https://api.themoviedb.org/3/movie/${id}?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US`
+let url =`https://api.themoviedb.org/3/tv/${id}?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US`
 
 console.log(url);
 
@@ -17,8 +17,8 @@ fetch(url)
         let section = document.querySelector('.detalle')
         let url_img = 'https://image.tmdb.org/t/p/w342/'
         section.innerHTML += `<div class="detalle">
-                                <h2>${data.original_title}</h2>
-                                <p>${data.release_date}  |  ${data.runtime} minutos</p>
+                                <h2>${data.original_name}</h2>
+                                <p>${data.first_air_date}  -  ${data.last_episode_to_air.air_date} </p>
                                 <div class="foto_trailer">
                                     <img src="${url_img + data.poster_path}" width="300px" height ='520px'>
                                     <div class = "Trailer"></div>
@@ -44,7 +44,7 @@ fetch(url)
 
 
     /// PLATAFORMAS
-    let url_plataformas = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=0317bbf7efac7dd04b2c2c3748377d57`
+    let url_plataformas = `https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=0317bbf7efac7dd04b2c2c3748377d57`
     fetch(url_plataformas)
     .then(function(response){
         return response.json();
@@ -65,7 +65,7 @@ fetch(url)
     })
 
     /// TRAILER
-    let url_trailer = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US`
+    let url_trailer = `https://api.themoviedb.org/3/tv/${id}/videos?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US`
     fetch(url_trailer)
     .then(function(response){
         return response.json();
@@ -94,7 +94,7 @@ fetch(url)
 
 
     ///RECOMENDACIONES
-    let url_recomendaciones = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&page=1`
+    let url_recomendaciones = `https://api.themoviedb.org/3/tv/${id}/recommendations?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&page=1`
     fetch(url_recomendaciones)
     .then(function(response){
         return response.json();
@@ -108,25 +108,25 @@ fetch(url)
                             <h2> Recomendaciones:</h2>
                             <section class="recomendaciones_2">
                             <article>
-                            <a href='detalle_pelicula.html?id=${data.results[0].id}'>
+                            <a href='detalle_serie.html?id=${data.results[0].id}'>
                             <img src="${url_img_reco + data.results[0].poster_path}">
                             <p>Nombre: ${data.results[0].original_title}</p>
                             </a>
                             </article>
                             <article>
-                            <a href='detalle_pelicula.html?id=${data.results[1].id}'>
+                            <a href='detalle_serie.html?id=${data.results[1].id}'>
                             <img src="${url_img_reco + data.results[1].poster_path}">
                             <p>Nombre: ${data.results[1].original_title}</p>
                             </a>
                             </article>
                             <article>
-                            <a href='detalle_pelicula.html?id=${data.results[2].id}'>
+                            <a href='detalle_serie.html?id=${data.results[2].id}'>
                             <img src="${url_img_reco + data.results[2].poster_path}">
                             <p>Nombre: ${data.results[2].original_title}</p>
                             </a>
                             </article>
                             <article>
-                            <a href='detalle_pelicula.html?id=${data.results[3].id}'>
+                            <a href='detalle_serie.html?id=${data.results[3].id}'>
                             <img src="${url_img_reco + data.results[3].poster_path}">
                             <p>Nombre: ${data.results[3].original_title}</p>
                             </a>
@@ -175,5 +175,3 @@ fetch(url)
         localStorage.setItem("favoritos", FavoritosToString);
         console.log(localStorage);
     })
-
-

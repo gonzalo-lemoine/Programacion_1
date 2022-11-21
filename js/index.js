@@ -94,7 +94,7 @@ fetch (url_series)
         let series = '';
         for(let i = 0; i<info.length; i++){
             series += `<article class="pelis">
-                                    <a href='detalle_pelicula.html?id=${info[i].id}'>
+                                    <a href='detalle_serie.html?id=${info[i].id}'>
                                         <img src=${"https://image.tmdb.org/t/p/w300/" + info[i].poster_path} alt='' />                                        
                                         <p>${info[i].original_name}</p>
                                     </a>

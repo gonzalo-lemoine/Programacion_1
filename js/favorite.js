@@ -27,7 +27,28 @@ function buscarYMostrarFavoritos (id){
             lista_fav.innerHTML += `<article>
                                 <a href='detalle_pelicula.html?id=${data.id}'>
                                 <img src="${url_img + data.poster_path}" >
-                                <p>Nombre: ${data.original_title}</p>
+                                <p> ${data.original_title}</p>
+                                </a>
+                            </article>`
+        })
+        .catch(function(e){
+            console.log(e);
+        })
+}
+function buscarYMostrarSeriesFavoritos (id){
+    let url_tv = `https://api.themoviedb.org/3/tv/${id}?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US`
+    let url_img_tv = 'https://image.tmdb.org/t/p/w200/'
+
+    fetch (url_tv)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            console.log(data);
+            lista_fav.innerHTML += `<article>
+                                <a href='detalle_serie.html?id=${data.id}'>
+                                <img src="${url_img_tv + data.poster_path}" >
+                                <p>${data.original_name}</p>
                                 </a>
                             </article>`
         })
