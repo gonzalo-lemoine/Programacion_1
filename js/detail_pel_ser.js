@@ -56,8 +56,8 @@ fetch(url)
         let url_img_plat = 'https://image.tmdb.org/t/p/w200/'
         section.innerHTML += ` <article>
                                 <h2> Disponible en:</h2>
-                                <img src="${url_img_plat + data.results.KR.rent[0].logo_path}">
-                                <img src="${url_img_plat + data.results.MX.buy[0].logo_path}">
+                                <a href='${data.results.KR.link}'> <img src="${url_img_plat + data.results.KR.rent[0].logo_path}" width='100px' height='100px'></a>
+                                <a href='${data.results.MX.link}'><img src="${url_img_plat + data.results.MX.buy[0].logo_path}" width='100px' height='100px'></a>
                                 </article>`   
     })
     .catch(function(error){
