@@ -126,9 +126,6 @@ fetch (url_series)
     //Capturo el input del form
     let inputBusqueda = document.querySelector('.inputBusqueda');
 
-    //Capturo el <p> de errores
-    let error = document.querySelector('.errorForm');
-
     //agrego un eventListener para el submit del form
     form.addEventListener('submit', function(e){
         e.preventDefault();
