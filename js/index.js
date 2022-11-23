@@ -28,12 +28,12 @@ fetch (url_pelis_pop)
     let flechaIzquierda = document.getElementById('flecha_izquierda');
     let flechaDerecha = document.getElementById('flecha_derecha');
     
-    // ? ----- ----- Event Listener para la flecha derecha. ----- -----
+    //  ----- ----- Event Listener para la flecha derecha. ----- -----
     flechaDerecha.addEventListener('click', () => {
         fila.scrollLeft += fila.offsetWidth;
     });
     
-    // ? ----- ----- Event Listener para la flecha izquierda. ----- -----
+    //  ----- ----- Event Listener para la flecha izquierda. ----- -----
     flechaIzquierda.addEventListener('click', () => {
         fila.scrollLeft -= fila.offsetWidth;
     });
@@ -110,12 +110,12 @@ fetch (url_series)
     let flechaIzquierda3 = document.getElementById('flecha_izquierda3');
     let flechaDerecha3 = document.getElementById('flecha_derecha3');
     
-    // ? ----- ----- Event Listener para la flecha derecha. ----- -----
+    //  ----- ----- Event Listener para la flecha derecha. ----- -----
     flechaDerecha3.addEventListener('click', () => {
         fila3.scrollLeft += fila3.offsetWidth;
     });
     
-    // ? ----- ----- Event Listener para la flecha izquierda. ----- -----
+    //  ----- ----- Event Listener para la flecha izquierda. ----- -----
     flechaIzquierda3.addEventListener('click', () => {
         fila3.scrollLeft -= fila3.offsetWidth;
     });
