@@ -391,6 +391,7 @@ b{
 .contenedor_peliculas_populares .contenedor_carrusel {
 	width: 100%;
 	overflow: hidden;
+    text-align: center;
 }
 .contenedor_peliculas_populares .contenedor_carrusel .carrusel {
     display: flex;
@@ -404,6 +405,7 @@ b{
 .contenedor_peliculas_recientes .contenedor_carrusel2 {
 	width: 100%;
 	overflow: hidden;
+    text-align: center;
 }
 .contenedor_peliculas_recientes .contenedor_carrusel2 .carrusel2 {
     display: flex;
@@ -416,6 +418,7 @@ b{
 .contenedor_series_recientes .contenedor_carrusel3 {
 	width: 100%;
 	overflow: hidden;
+    text-align: center;
 }
 .contenedor_series_recientes .contenedor_carrusel3 .carrusel3 {
     display: flex;
